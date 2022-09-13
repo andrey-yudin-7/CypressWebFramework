@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-12T19:16:01.216Z",
+    "end": "2022-09-12T19:16:41.814Z",
+    "duration": 40598,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb63f6e3-1677-4a89-a5f8-cad163adfc1b",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\UserLoginValidationTest.js",
+      "file": "cypress\\integration\\examples\\UserLoginValidationTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "beadb6d9-b9ae-46b0-8bc7-384cc35b3bac",
+          "title": "E2e test suit - user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First test case - verify login validation",
+              "fullTitle": "E2e test suit - user login First test case - verify login validation",
+              "timedOut": null,
+              "duration": 18965,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\nconst loginPage = new _LoginPage.default();\nloginPage.verifyLoginPageElements(); //put empty data and verify required fields displaying\nloginPage.getSubmitButton().click({\n  force: true\n});\nloginPage.getUsernameErrorMessage().should('exist').contains('Please enter an email or phone number');\nloginPage.getPasswordErrorMessage().should('exist').contains('Please enter your password'); //put correct data and verify user name displayed correctly on sign in\nloginPage.getEmail().type(loginData.email);\nloginPage.getPassword().type(loginData.password);\nloginPage.getKeepMeSignedIn().click({\n  force: true\n});\nloginPage.getSubmitButton().click({\n  force: true\n});\ncy.wait(5000);\nhomePage.getUserLoginInfo().then(function (element) {\n  const loginText = element.text();\n  expect(loginText.includes(loginData.userName)).to.be.true;\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.styles__LinkText-sc-u2k6h-3`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.styles__LinkText-sc-u2k6h-3`, but never found it.\n    at Object.userLoginInfo (https://www.target.com/__cypress/tests?p=cypress\\integration\\examples\\UserLoginValidationTest.js:177:31)\n    at HomePage.getUserLoginInfo (https://www.target.com/__cypress/tests?p=cypress\\integration\\examples\\UserLoginValidationTest.js:222:26)\n    at Context.eval (https://www.target.com/__cypress/tests?p=cypress\\integration\\examples\\UserLoginValidationTest.js:136:14)",
+                "diff": null
+              },
+              "uuid": "bb690161-aace-48e0-a8dd-c01b631a9031",
+              "parentUUID": "beadb6d9-b9ae-46b0-8bc7-384cc35b3bac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bb690161-aace-48e0-a8dd-c01b631a9031"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18965,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
