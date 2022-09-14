@@ -66,8 +66,12 @@ For the each page created a separate page object class to store it's elements an
 
 ### __2.3 Data driven concepts from fixtures__ 
 
-Data driven approach (reading data files and storing input values into variables) is implemented by reading from fixtures. Fixtures enable data-driven automation in Cypress by saving the test data in JSON format:
+Data driven approach (reading data files and storing input values into variables) is implemented by reading from fixtures. 
+
 <img src="cypress/support/readmeImages/fixtures.png">
+
+Fixtures enable data-driven automation in Cypress by saving the test data in JSON format:
+
 <img src="cypress/support/readmeImages/data1.png">
 
 <a id="commands"></a>
@@ -99,7 +103,8 @@ Default path for Screenshots specified in cypress.config.js:
 
 Cypress records a video for each spec file when running tests during cypress run. Videos are not automatically recorded during cypress open.
 Videos are stored in the videosFolder which is set to cypress/videos by default.
- <img src="cypress/support/readmeImages/videos.png">
+
+<img src="cypress/support/readmeImages/videos.png">
 
 <a id="reports"></a>
 
@@ -115,6 +120,7 @@ Implementation in cypress.config.js:
 ```
 
 After execution is completed, the mochawesome-report folder gets generated within the Cypress project containing reports in html and json formats.
+
  <img src="cypress/support/readmeImages/report1.png">
 
 Right-click on the mochawesome.html report, select the Copy Path option, and open the path copied on the browser.
