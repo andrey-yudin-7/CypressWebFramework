@@ -36,7 +36,6 @@ describe('E2e test suit - user login', () => {
         loginPage.getPassword().type(loginData.password)
         loginPage.getKeepMeSignedIn().click({ force: true })
         loginPage.getSubmitButton().click({ force: true })
-        cy.wait(5000)
         homePage.getUserLoginInfo().then(function (element) {
             const loginText = element.text()
             expect(loginText.includes(loginData.userName)).to.be.true

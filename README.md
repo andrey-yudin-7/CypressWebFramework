@@ -49,7 +49,7 @@ productListPage.getProductTitles().each(($el, index, $list) => {
 
 <a id="pageobject"></a>
 
-### __2.2 Page object mechanism.__ 
+### __2.2 Page object mechanism__ 
 
 Framework built using page object pattern to achieve the following goals for the project:
     - easy to maintain project;
@@ -61,6 +61,11 @@ Framework built using page object pattern to achieve the following goals for the
 For the each page created a separate page object class to store it's elements and methods.
 
 <img src="cypress/support/readmeImages/page_object.png">
+
+
+Example of test cases with using created page objects:
+
+<img src="cypress/support/readmeImages/userlogin.png">
 
 <a id="datadriven"></a>
 
@@ -124,3 +129,5 @@ After execution is completed, the mochawesome-report folder gets generated withi
  <img src="cypress/support/readmeImages/report1.png">
 
 Right-click on the mochawesome.html report, select the Copy Path option, and open the path copied on the browser.
+
+ <img src="cypress/support/readmeImages/report2.png">
